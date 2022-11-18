@@ -1,22 +1,14 @@
+import React from 'react'
+import GlobalStyle from './components/CreateGlobalStyles';
+import Routes from './RoutesInfo.js';
 
-import Home from "./pages/Home";
-
-import styled from 'styled-components'
-import GlobalStyle from "./components/CreateGlobalStyles";
-
-const Container = styled.div`
-   
-`
-
-
-function App() {
+const App = () => {
   return (
-   <Container>
-   <GlobalStyle/>
-    
-    <Home/>
-   </Container>
-  );
+    <div>
+      <GlobalStyle/>
+      <Routes/>
+    </div>
+  )
 }
 
-export default App;
+export default App

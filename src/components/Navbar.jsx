@@ -5,6 +5,7 @@ import { Badge } from "@material-ui/core";
 import { Search,ShoppingCartOutlined,MenuIcon } from "@material-ui/icons";
 import DragHandleIcon from '@material-ui/icons/DragHandle';
 import logo from '../images/logo5.svg'
+import { Link } from 'react-router-dom';
 
 
 const Container = styled.div`
@@ -74,13 +75,12 @@ const Navbar = () => {
            
            
             <Left>
-                <Language>EN</Language>
-                <SearchContainer>
-                    <Input/> 
-                    <Search/>
-                </SearchContainer>
+                <Link to='/'> Products </Link>
+                <Link to='/products'> Products </Link>
+                
             </Left>
-            <Center><Logo src={logo}/></Center>
+            <Center>
+                <Logo src={logo}/></Center>
             <Right>
                 <MenuItem>REGISTER</MenuItem>
                 <MenuItem>SIGN IN</MenuItem>

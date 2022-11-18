@@ -63,34 +63,50 @@ export const popularProducts = [
     {
         id:1,
         img:prod1,
+        title:"TARO LOVE",
+        price:"$2"
     },
     {
         id:2,
         img:prod6,
+        title:"RED VELVET",
+        price:"$4"
     },
     {
         id:3,
         img:prod3,
+        title:"BOBA THAI TEA",
+        price:"$5"
     }, 
     {
         id:4,
         img:prod8,
+        title:"TARO LOVE",
+        price:"$10"
     },
     {
         id:5,
         img:prod5,
+        title:"CHOCO GREEEN TEA",
+        price:"$5"
     },
     {
         id:6,
         img:prod2,
+        title:"BOBO STRAWBERRY",
+        price:"$2"
     },
     {
         id:7,
         img:prod7,
+        title:"TARO LOVE",
+        price:"$7"
     },
     {
         id:8,
         img:prod4,
+        title:"TEA MANIS",
+        price:"$3"
     },
 
 ]

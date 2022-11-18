@@ -12,13 +12,21 @@ justify-content:space-between;
 
 `
 
+const Title = styled.h4`
+    font-size:40px;
+`
+
 const Products = () => {
   return (
+    <div>
+    <Title>Products</Title>
     <Container>
+      
         {popularProducts.map((item) => (
             <Product item={item} key={item.id}/>
         ))}
     </Container>
+    </div>
   )
 }
 
