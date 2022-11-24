@@ -5,12 +5,19 @@ import { Badge } from "@material-ui/core";
 import { Search,ShoppingCartOutlined,MenuIcon } from "@material-ui/icons";
 import DragHandleIcon from '@material-ui/icons/DragHandle';
 import logo from '../images/logo5.svg'
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 const Container = styled.div`
-background-color:transparent;
+background-color:#fff;
     height:75px;
+    position: fixed;
+    z-index:100;
+    top: 0;
+    right: 0;
+    left: 0;
+    
+    
     
 `
 
@@ -26,7 +33,17 @@ const Left = styled.div`
     flex:1;
     display:flex;
     align-items:center;
+    justify-content:start;
 `
+
+const LinkItems = styled(Link)`
+text-decoration:none;
+font-size:14px;
+cursor:pointer;
+margin-left:25px;
+color:#000;
+`
+
 const Language = styled.div`
     font-size:14px;
     cursor:pointer;
@@ -75,23 +92,25 @@ const Navbar = () => {
            
            
             <Left>
-                <Link to='/'> Products </Link>
-                <Link to='/products'> Products </Link>
+                <LinkItems to="/">HOME</LinkItems>
+                <LinkItems to='#about'> ABOUT </LinkItems>
+                <LinkItems to='/productList'> PRODUCTS </LinkItems>
                 
             </Left>
             <Center>
                 <Logo src={logo}/></Center>
             <Right>
-                <MenuItem>REGISTER</MenuItem>
-                <MenuItem>SIGN IN</MenuItem>
+            <LinkItems to="/signup">REGISTER</LinkItems>
+            <LinkItems to="/login">LOGIN</LinkItems>
+             
                 {/* <MenuItem>
                     <Badge badgeContent={4} color="primary">
                         <ShoppingCartOutlined/>
                     </Badge>
                 </MenuItem> */}
-                <MenuItem>
+                {/* <MenuItem>
                     <DragHandleIcon/>
-                </MenuItem>
+                </MenuItem> */}
             </Right>
         </Wrapper>
     </Container>

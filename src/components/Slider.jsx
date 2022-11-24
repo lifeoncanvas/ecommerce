@@ -5,7 +5,10 @@ import { ArrowLeftOutlined,ArrowRightOutlined } from "@material-ui/icons";
 
 import img from '../images/hero.jpg'
 import {sliderItems} from "../data"
+import {Link} from "react-router-dom"
+
 const Container = styled.div`
+
     width:100%;
     height:100vh;
     display:flex;
@@ -50,11 +53,12 @@ background-color: #${props=> props.bg}
 
 const ImageContainer = styled.div`
 height:100%;
-
+ margin-top:10rem;
 flex:1;
 `
 
 const Image = styled.img`
+
  height:80%;
  margin:20px;
 `
@@ -72,8 +76,11 @@ font-weight:500;
 letter-spacing:2px;
 `
 
-const Button = styled.button`
+const Button = styled(Link)`
 padding:10px;
+text-decoration:none;
+color:#000;
+border:1px solid #000;
 font-size:15px;
 background-color:transparent;
 cursor:pointor;
@@ -104,7 +111,8 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>Order now</Button>
+
+              <Button to="/products">Order now</Button>
             </InfoContainer>
             </Slide>
               ))}

@@ -18,7 +18,7 @@ export const sliderItems = [
         id:1,
         img:img1,
         title:"SUMMER COCO",
-        desc:"DONT COMPROMISE YOUR TASTE ",
+        desc:"Boba tea usually referred to as bubble tea,  you may buy boba from various components, including jelly, fruit, and chocolate.  ",
         bg:"f5fafd",
     },
 
@@ -45,69 +45,77 @@ export const categories = [
     {
         id:1,
         img:"https://i.pinimg.com/736x/17/6a/cf/176acf03a9625d0e51f1df12593c03f5.jpg",
-        title:"CHOCOLATE"
+        title:"CHOCOLATE",
+        cat:"choco"
     },
      {
         id:2,
         img:"https://i.pinimg.com/564x/d4/35/98/d43598a90714798ed5cff839364893a2.jpg",
         title:"STRAWBERRY",
+        cat:"strawberry"
     },
     {
         id:3,
         img:"https://i.pinimg.com/474x/73/99/3b/73993bf4a7b455bd03d30214cea4b6f3.jpg",
-        title:"VANILLA"
+        title:"VANILLA",
+        cat:"vanilla"
     }
 ];
 
-export const popularProducts = [
-    {
-        id:1,
-        img:prod1,
-        title:"TARO LOVE",
-        price:"$2"
-    },
-    {
-        id:2,
-        img:prod6,
-        title:"RED VELVET",
-        price:"$4"
-    },
-    {
-        id:3,
-        img:prod3,
-        title:"BOBA THAI TEA",
-        price:"$5"
-    }, 
-    {
-        id:4,
-        img:prod8,
-        title:"TARO LOVE",
-        price:"$10"
-    },
-    {
-        id:5,
-        img:prod5,
-        title:"CHOCO GREEEN TEA",
-        price:"$5"
-    },
-    {
-        id:6,
-        img:prod2,
-        title:"BOBO STRAWBERRY",
-        price:"$2"
-    },
-    {
-        id:7,
-        img:prod7,
-        title:"TARO LOVE",
-        price:"$7"
-    },
-    {
-        id:8,
-        img:prod4,
-        title:"TEA MANIS",
-        price:"$3"
-    },
+ const data = {
+    popularProducts :
+    [
+        {
+            id:1,
+            img:prod1,
+            title:"TARO LOVE",
+            price:"$2"
+        },
+        {
+            id:2,
+            img:prod6,
+            title:"RED VELVET",
+            price:"$4"
+        },
+        {
+            id:3,
+            img:prod3,
+            title:"BOBA THAI TEA",
+            price:"$5"
+        }, 
+        {
+            id:4,
+            img:prod8,
+            title:"TARO LOVE",
+            price:"$10"
+        },
+        {
+            id:5,
+            img:prod5,
+            title:"CHOCO GREEN",
+            price:"$5"
+        },
+        {
+            id:6,
+            img:prod2,
+            title:" STRAWBERRY",
+            price:"$2"
+        },
+        {
+            id:7,
+            img:prod7,
+            title:"TARO LOVE",
+            price:"$7"
+        },
+        {
+            id:8,
+            img:prod4,
+            title:"TEA MANIS",
+            price:"$3"
+        },
+    
+    ],
+ };
 
-]
+ export default data;
 

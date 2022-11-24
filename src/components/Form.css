@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500&family=Montserrat&display=swap');
 
 *{
   margin: 0;
@@ -14,7 +13,9 @@
     height: 600px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-family: 'Lora', serif;
+    
+    
+   
   }
   
   .close-btn {
@@ -31,7 +32,8 @@
     /* border-radius: 10px 0 0 10px; */
     background: #fff;
     position: relative;
-    background-color: #ABBBDC;
+    background-color: #fff;
+   
   }
   
   .form-img {
@@ -39,6 +41,7 @@
     height: 80%;
     object-fit: cover;
     position: absolute;
+    padding-top: 3rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -62,9 +65,9 @@
   
   .form-content-right {
     /* border-radius: 0 10px 10px 0; */
-   
+    
     position: relative;
-    background: #ABBBDC;
+    background: #fff;
   }
   
   .form {
@@ -81,15 +84,16 @@
   }
   
   .form h1 {
+    padding-top: 2rem;
     font-size: 1.7rem;
     text-align: start;
     width: 80%;
     margin-bottom: 1rem;
     font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
+   
    
     text-transform: uppercase;
-    color: #0E4471;
+    
   }
   
   .form-inputs {
@@ -119,7 +123,7 @@
     height: 40px;
     width: 100%;
     border: none;
-    background-color:#fff;
+    background-color:#f6e8f7;
   }
   
   .form-input::placeholder {
@@ -132,17 +136,19 @@
     height: 50px;
     margin-top: 10px;
     border-radius: 2px;
-    background: #F17B57;
+    border:1px solid #000;
+    background: #fff;
     outline: none;
-    border: none;
-    color: #fff;
+    
+    color: #000;
     font-size: 1rem;
   }
   
   .form-input-btn:hover {
     cursor: pointer;
-    background: #AA968B;
+    background: #CF9BC1;
     color: #211715;
+    border:none;
     transition: all 0.4s ease-out;
   }
   
@@ -162,6 +168,8 @@
   }
 
   .linkbth{
-    color:#fff;
+    color:#000;
+    
     text-decoration: none;
+ 
   }

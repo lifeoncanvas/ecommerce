@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import FormSuccess from '../components/FormSuccess';
 
 
 const Container = styled.div`
@@ -60,20 +61,21 @@ color:blue;
 
 const Login = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Title>LOGIN AN ACCOUNT </Title>
-        <Form>
-          <Input placeholder="email"/>
-          <Input placeholder="password"/>
-        <Button>CREATE</Button>
-        <ForgotPassword>Forgot password?</ForgotPassword>
+  //   <Container>
+  //     <Wrapper>
+  //       <Title>LOGIN AN ACCOUNT </Title>
+  //       <Form>
+  //         <Input placeholder="email"/>
+  //         <Input placeholder="password"/>
+  //       <Button>CREATE</Button>
+  //       <ForgotPassword>Forgot password?</ForgotPassword>
 
-        <Tosignin>Don't have an account?<Signinpg>Register</Signinpg></Tosignin>
-        </Form>
+  //       <Tosignin>Don't have an account?<Signinpg>Register</Signinpg></Tosignin>
+  //       </Form>
        
-      </Wrapper>
-   </Container>
+  //     </Wrapper>
+  //  </Container>
+  <FormSuccess/>
   )
 }
 

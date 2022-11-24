@@ -1,5 +1,6 @@
 import  styled  from 'styled-components'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
  flex:1;
@@ -28,9 +29,12 @@ justify-content:start;
 `
 const Title = styled.h1`
     // color:white;
+    padding-top:10px;
+ padding-left:7rem;
+
     margin-bottom:20px;
     font-size:20px;
-    padding-left:5px;
+   
 `
 const Button = styled.button`
    border:none;
@@ -41,14 +45,21 @@ const Button = styled.button`
    font-weight:600;
 `
 
+const CatLink = styled(Link)`
+
+color:#000;
+`
+
 const CategoryItem = ({item}) => {
   return (
     <Container>
+      <CatLink to={`/products/${item.cat}`}>
       <Image src={item.img}/>
       <Info>
             <Title>{item.title}</Title>
             {/* <Button>SHOP NOW</Button> */}
       </Info>
+      </CatLink>
     </Container>
   )
 }

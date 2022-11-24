@@ -2,7 +2,9 @@ import React from 'react';
 import validate from './validateInfo';
 import useForm from '../Hooks/useForm';
 import './Form.css';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import Navbar from './Navbar';
+
 
 //recieving submitForm through prop.
 const FormSuccess = ({ submitForm }) => {
@@ -13,7 +15,13 @@ const FormSuccess = ({ submitForm }) => {
   );
 
   return (
-    <div className='form-content-right'>
+    <>
+    <Navbar/>
+    <div className='form-container'>
+       <div className='form-content-left'>
+          <img className='form-img' src="https://i.pinimg.com/564x/23/3a/23/233a23f87f7a6284e84ddaa486526a6c.jpg" alt='spaceship' />
+        </div>
+      <div className='form-content-right'>
       <form onSubmit={handleSubmit} className='form' noValidate>
         <h1>
           Get started with us today! 
@@ -44,17 +52,23 @@ const FormSuccess = ({ submitForm }) => {
           {errors.password && <p>{errors.password}</p>}
         </div>
        
-        <button className='form-input-btn' type='submit' >
-        <Link to='/' className='linkbth' >
-          button
-        </Link>
-        </button>
-        
-        <span className='form-input-login'>
-          Dont have an account?  <Link to='/form'>Signin</Link>
+       <button className='form-input-btn' type='submit'>
+       <Link to='/' className='linkbth'>
+        butthon
+       </Link>
+       </button >
+      
+       <span className='form-input-login'>
+        have an account?  <Link to='/signup'>Register</Link>
         </span>
+        
+        {/* <span className='form-input-login'>
+         <button onClick={submitForm()}> Dont have an account? Register</button>
+        </span> */}
       </form>
     </div>
+    </div>
+    </>
   );
 };
 

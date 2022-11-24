@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import img from '../images/p1.png'
+import{useLocation} from "react-router-dom"
 
 const Container = styled.div``;
 const Wrapper = styled.div`
@@ -118,7 +119,7 @@ const Ingredients=styled.div``
 
 
 
-const Product = () => {
+const SingleProduct = ({item}) => {
   return (
     <Container>
       
@@ -128,7 +129,7 @@ const Product = () => {
             <Image src={img}/>
             </ImgContainer>
             <InfoContainer>
-               <Title>cool beverages</Title>
+               <Title>{item.title}</Title>
                <Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea fuga unde laboriosam eligendi repellendus libero at debitis corporis sapiente ducimus? Recusandae cum illum perferendis dolor, nobis repellendus omnis accusantium atque consequatur distinctio doloribus similique consequuntur ullam, neque quo, vitae consectetur nulla ipsum expedita enim explicabo. Dolorum dolores totam quasi vel.</Desc>
                <Price>$ 20</Price>
                {/* <FilterContainer>
@@ -158,9 +159,9 @@ const Product = () => {
 
             </InfoContainer>
         </Wrapper>
-        <Footer/>
+       
     </Container>
   )
 }
 
-export default Product
+export default SingleProduct

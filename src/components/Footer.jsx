@@ -5,9 +5,12 @@ import logo from '../images/logo4.svg'
 
 const Container = styled.div`
 display:flex;
+background:#fcf1ed;
+width:96%;
+margin:auto;
 `
 const Left = styled.div`
-flex:1;
+flex:2;
 display:flex;
 flex-direction:column;
 padding:20px;
@@ -47,6 +50,7 @@ const Title = styled.h3`
 `;
 
 const List = styled.ul`
+font-family: 'Raleway', sans-serif;
    margin:0;
    padding:0;
    list-style:none;
@@ -65,6 +69,7 @@ padding:20px;
 `;
 
 const ContactItem = styled.div`
+font-family: 'Raleway', sans-serif;
 margin-bottom:20px;
 display:flex;
 align-items:center;

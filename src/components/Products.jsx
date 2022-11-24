@@ -1,10 +1,11 @@
 import React from 'react'
 
 import styled from 'styled-components';
-import {popularProducts}  from "../data"
+import data  from "../data"
 import Product from './Product';
 
 const Container = styled.div`
+margin-top:2rem;
 padding:20px;
 display:flex;
 flex-wrap:wrap;
@@ -17,13 +18,14 @@ const Title = styled.h4`
 `
 
 const Products = () => {
+  console.warn(data.popularProducts)
   return (
     <div>
-    <Title>Products</Title>
+     
     <Container>
       
-        {popularProducts.map((item) => (
-            <Product item={item} key={item.id}/>
+        {data.popularProducts.map((item,index) => (
+            <Product item={item} img={item.img}  title={item.title} price={item.price} key={index}/>
         ))}
     </Container>
     </div>

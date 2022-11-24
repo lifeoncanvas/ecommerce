@@ -1,5 +1,6 @@
 import { FavoriteOutlined, SearchOutlined, ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react'
+import {useCart} from "react-use-cart";
 
 
 import styled from 'styled-components';
@@ -12,7 +13,7 @@ height:100%;
 position:absolute;
 top:0;
 left:0;
- background-color:rgba(0,0,0,0.2);
+background: linear-gradient(90deg, rgba(233,165,140,0.5) 0%, rgba(233,194,180,0.5) 35%, rgba(247,242,239,0.5) 100%);
  
 z-index:3;
 display:flex;
@@ -30,6 +31,7 @@ justify-content:center;
 `
 
 const Container = styled.div`
+
 flex:1;
 margin:5px;
 min-width:280px;
@@ -43,7 +45,7 @@ position:relative;
 
 
     &:hover ${Info}{
-        opacity:1;
+        opacity:5;
     }
 `
 
@@ -82,19 +84,37 @@ transition:all 0.5s ease;
 
 `
 const Title = styled.h1`
+font-family: 'Libre Baskerville', serif;
+font-size:2rem;
+text-transform:capatalize;
+font-wight:100;
+
 `
 const Price = styled.h1`
 `
+const Button = styled.button`
 
-const Product = ({item}) => {
+ padding: 1rem 2rem;
+ background-color:#fff;
+ border-none;
+ outline:none;
+
+
+`
+
+const Product = (props) => {
+    const { addItem } = useCart();
+
   return (
+    
     <Container>
        
         <Circle/>
-        <Image src={item.img}/>
+        
+        <Image src={props.img}/>
        
         <Info>
-        <Icons>
+        {/* <Icons>
             <Icon>
                 <ShoppingCartOutlined/>
             </Icon>
@@ -102,10 +122,11 @@ const Product = ({item}) => {
                 <FavoriteOutlined/>
             </Icon>
             
-        </Icons>
+        </Icons> */}
            
-            <Title>{item.title}</Title>
-            <Price>{item.price}</Price>
+            <Title>{props.title}</Title>
+            <Price>{props.price}</Price>
+            <Button onClick = {() => addItem(props.item)}>add to cart</Button>
             
           
             
@@ -113,6 +134,7 @@ const Product = ({item}) => {
         </Info>
        
     </Container>
+  
   )
 }
 

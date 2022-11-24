@@ -1,8 +1,11 @@
 import React from 'react';
+import axios from 'axios';
 import validate from './validateInfo';
 import useForm from '../Hooks/useForm';
 import './Form.css';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
+
 
 //recieving submitForm through prop.
 const FormSignup = ({ submitForm }) => {
@@ -12,8 +15,17 @@ const FormSignup = ({ submitForm }) => {
     validate
   );
 
+   axios.post('http://localhost:80/api/', values);
+   console.log(values);
+
   return (
-    <div className='form-content-right'>
+    <>
+    <Navbar/>
+   <div className='form-container'>
+       <div className='form-content-left'>
+          <img className='form-img' src="https://i.pinimg.com/564x/3d/ed/9b/3ded9bb9bd572b85d0fea68cd06ca1aa.jpg" alt='spaceship' />
+        </div>
+      <div className='form-content-right'>
       <form onSubmit={handleSubmit} className='form' noValidate>
         <h1>
           Get started with us today! 
@@ -67,13 +79,18 @@ const FormSignup = ({ submitForm }) => {
           {errors.password2 && <p>{errors.password2}</p>}
         </div>
         <button className='form-input-btn' type='submit'>
-          Sign up
+        <Link to='/login' className='linkbth' >
+          button
+        </Link>
         </button>
+       
         <span className='form-input-login'>
-        have an account?  <Link to='/FormSignup'>Login</Link>
+        have an account?  <Link to='/login'>Login</Link>
         </span>
       </form>
     </div>
+   </div>
+   </>
   );
 };
 
